@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      /* .box{
+        width: 300px;        
+        border: 5px solid black;
+      } */
+
+      div{
+        line-height: 1cm;
+      }
+
+      /* label{
+        line-height: 1cm;
+      } */
+
+      h1 {
+        text-align: center;
+        color: green;
+      }
+      #id1 {
+        opacity: 0.5;
+      }
+
+      #id2 {
+        opacity: 0.2;
+      }
+
+      img {
+        border: 5px solid black;
+      }
+
+      #id4 {
+        -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+        filter: blur(5px);
+      }
+
+      /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+      .flip-box {
+        background-color: transparent;
+        width: 300px;
+        height: 200px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
+
+      /* This container is needed to position the front and back side */
+      .flip-box-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        /* width: 300px;
+        height: 200px; */
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Position the front and back side */
+      .flip-box-front,
+      .flip-box-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* width: 300px;
+        height: 200px; */
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side (fallback if image is missing) */
+      .flip-box-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-box-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+      }
+
+      #img1{
+        /* align-content: center; */
+        margin-left: 1100px;
+      }
+
+    </style>
+
+    <h1>Contoh Perjalanan Hidup saya</h1>
+    <br />
+
+    <div id="img1">
+      <div class="box">
+        <div>
+          <label> Contoh gambar Transparance</label>
+        </div>
+        <!-- <br /> -->
+        <img id="id1" src="src/contoh gambar 1.jpg" style="width: 300px" />
+      </div>
+
+      <div id="img2">
+        <div>
+          <label> Contoh gambar Transparance 2</label>
+        </div>
+        <!-- <br /> -->
+        <img id="id2" src="src/contoh gambar 2.jpg" style="width: 300px" />
+      </div>
+
+      <div id="img3">
+        <label>Contoh Gambar Flip</label>
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <!-- <label>Image Flip dengan Text</label> -->
+          <div class="flip-box-front">
+            <img
+              src="src/contoh gambar 3.jpg"
+              alt="Flip Box"
+              style="width: 300px; height: 200px"
+            />
+          </div>
+          <div class="flip-box-back">
+            <h2>Contoh Image Flip Dengan Text</h2>
+            <p>Sendiri Melawan Dunia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div id="img4">
+        <div>
+          <label>Contoh Blur Gambar</label>
+        </div>
+        <!-- <br /> -->
+        <img id="id4" src="src/contoh gambar 4.jpg" style="width: 300px" />
+      </div>
+
+      <div id="img5">
+        <div>
+          <label> Contoh Gambar Original</label>
+        </div>
+        <!-- <br /> -->
+        <img id="id5" src="src/contoh gambar 5.jpg" style="width: 300px" />
+      </div>
+    </div>
+    
+  </body>
+</html>
